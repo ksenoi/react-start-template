@@ -1,5 +1,5 @@
 import React, {FC} from 'react';
-import {Header } from 'src/components/Header/Header'
+import {Header } from '../../components/Header/Header'
 
 export type LayoutProps = {
   children: React.ReactNode;

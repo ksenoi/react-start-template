@@ -1,6 +1,6 @@
 import React, { FC } from 'react'
 import './CartItem.css'
-import { Product as ProductType } from 'src/types/Product';
+import { Product as ProductType } from '../../types/Product';
 
 interface Props {
   product: ProductType;
