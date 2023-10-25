@@ -1,0 +1,32 @@
+.btnAddToCart {
+  border: none;
+  outline: none;
+  background: linear-gradient(90deg, #2a8ed1, #137eaf);
+  padding: 0.8rem 1.6rem;
+  border-radius: 20px;
+  color: white;
+  font-size: 1.2em;
+  box-shadow: 1px 10px 2rem rgba(8, 98, 139, 0.5);
+  transition: all 0.2s ease-in;
+  text-decoration: none;
+}
+
+.btnAddToCart__changeCount {
+  background: #2a8ed1;
+  border: none;
+  font-size: 1.2em;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  text-align: center;
+}
+
+.btnAddToCart__input {
+  width: 40px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  text-align: center;
+  font-style: normal;
+  font-size: 1.2em;
+  line-height: 1.4;
+  color: rgba(0, 0, 0, 0.8);
+}
