@@ -34,6 +34,10 @@ export type Percent = {
   percent: number;
 };
 
+function exhaustiveGuard(_value: never): never {
+  throw new Error(`ERROR! Reached forbidden guard function with unexpected value: ${JSON.stringify(_value)}`);
+}
+
 // Здесь, возможно, нужно использовать as, возможно в switch передавать немного по-другому
 const getDataAmount = (data: Data): number => {
   switch (data.type) {
@@ -41,8 +45,7 @@ const getDataAmount = (data: Data): number => {
       return (data.value as Money).amount;
     default: {
       // eslint-disable-next-line @typescript-eslint/no-unused-vars
-      const unhandled: never = data.type; // здесь, возможно, нужно использовать нечто другое. :never должен остаться
-      throw new Error(`unknown type: ${unhandled}`);
+      return exhaustiveGuard(data.type);
     }
   }
 };
