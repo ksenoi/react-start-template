@@ -63,15 +63,15 @@ export const getNumberedArray = (arr: Array<number>): Array<{value: number, numb
 export const toStringArray = (arr: Array<number>): Array<string> => arr.map((value, number) => `${value}_${number}`);
 
 type Customer = {
-  id?: number;
+  id: number;
   name: string;
   age: number;
   isSubscribed: boolean;
 };
 
-export const transformCustomers = (customers: Array<Customer>): Array<Customer> => {
+export const transformCustomers = (customers: Array<Customer>): Record<number, Omit<Customer, 'id'>> => {
   return customers.reduce((acc, customer) => {
     acc[customer.id] = { name: customer.name, age: customer.age, isSubscribed: customer.isSubscribed };
     return acc;
-  }, {} as Array<Customer>);
+  }, {} as Record<number, Omit<Customer, 'id'>>);
 };
